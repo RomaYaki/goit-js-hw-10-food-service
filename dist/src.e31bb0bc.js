@@ -2439,29 +2439,24 @@ var Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme'
 };
-window.addEventListener('load', function (e) {
-  console.log('load');
-  var currentTheme = localStorage.getItem('theme');
-  console.log(currentTheme);
-
-  if (currentTheme) {
-    refs.body.className = currentTheme;
-    console.log(Theme.DARK === currentTheme ? false : true, 'checker');
-    refs.switch.checked = Theme.DARK === currentTheme ? false : true;
-  }
-});
 refs.switch.addEventListener('change', function (e) {
-  console.log(e.target.checked);
-
   if (e.target.checked) {
+    console.log(refs.body.classList.replace);
     refs.body.classList.replace(Theme.LIGHT, Theme.DARK);
   } else {
     refs.body.classList.replace(Theme.DARK, Theme.LIGHT);
   }
 
+  localStorage.setItem();
   localStorage.setItem('theme', refs.body.classList);
-}); // if(currentTheme === Theme.DARK)
-// refs.switch.checked = true;
+});
+var currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+  refs.body.className = currentTheme;
+}
+
+if (currentTheme === Theme.DARK) refs.switch.checked = true;
 },{"./sass/main.scss":"sass/main.scss","../menu.json":"../menu.json","./tamplate/menu_items.hbs":"tamplate/menu_items.hbs"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
