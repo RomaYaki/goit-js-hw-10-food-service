@@ -17,29 +17,22 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-window.addEventListener('load', (e) => {
-  console.log('load')
-
-  const currentTheme = localStorage.getItem('theme');
-  console.log(currentTheme)
-  if (currentTheme) {
-    
-    refs.body.className = currentTheme;
-    console.log(Theme.DARK === currentTheme ? false : true, 'checker');
-    refs.switch.checked = Theme.DARK === currentTheme ? false : true;
-  }
-})
-
 refs.switch.addEventListener('change', (e) => {
-  console.log(e.target.checked);
   if (e.target.checked) {
+    console.log(refs.body.classList.replace);
     refs.body.classList.replace(Theme.LIGHT, Theme.DARK);
   } else {
     refs.body.classList.replace(Theme.DARK, Theme.LIGHT);
   }
+  localStorage.setItem()
   localStorage.setItem('theme', refs.body.classList);
 })
 
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+  
+  refs.body.className = currentTheme;
+}
 
-// if(currentTheme === Theme.DARK)
-// refs.switch.checked = true;
+if(currentTheme === Theme.DARK)
+refs.switch.checked = true;
