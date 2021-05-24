@@ -3,20 +3,20 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://github.com/RomaYaki/goit-js-hw-10-food-service.git",
+  "homepage": "https://goitacademy.github.io/parcel-project-template",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /parcel-project-template/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RomaYaki/goit-js-hw-10-food-service.git"
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
   "keywords": [],
-  "author": "Roman Iakimovich <roma.yakimovich@yahoo.com>",
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RomaYaki/goit-js-hw-10-food-service.git"
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
