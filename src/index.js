@@ -18,13 +18,11 @@ const Theme = {
 };
 
 refs.switch.addEventListener('change', (e) => {
-  if (e.target.checked) {
-    
+  if (e.target.checked) {   
     refs.body.classList.replace(Theme.LIGHT, Theme.DARK);
   } else {
     refs.body.classList.replace(Theme.DARK, Theme.LIGHT);
   }
-
   localStorage.setItem('theme', refs.body.classList);
 })
 
